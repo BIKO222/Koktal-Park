@@ -18,6 +18,7 @@
       line-height: 1.6;
       background: #e0f7e9;
       color: #2e4e1d;
+      overflow-x: hidden;
     }
 
     .container {
@@ -26,6 +27,7 @@
       margin: 0 auto;
     }
 
+    /* Навигация */
     .navbar {
       position: fixed;
       width: 100%;
@@ -67,6 +69,7 @@
       color: #ffe400;
     }
 
+    /* Hero-секция */
     .hero {
       height: 100vh;
       background: url('https://images.unsplash.com/photo-1558981033-1c7b6a246ed9?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
@@ -116,6 +119,7 @@
       background: #e6cc00;
     }
 
+    /* Секция о парке */
     .section {
       padding: 80px 0;
       text-align: center;
@@ -132,23 +136,19 @@
       margin: 0 auto 40px;
     }
 
-    .services, .gallery {
+    /* Галерея */
+    .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       padding-top: 30px;
     }
 
-    .service, .gallery-item {
+    .gallery-item {
       background: #fff;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    }
-
-    .service h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
     }
 
     .gallery-item img {
@@ -156,6 +156,7 @@
       border-radius: 10px;
     }
 
+    /* Контакты */
     .contact {
       background: #2e4e1d;
       color: #fff;
@@ -166,6 +167,7 @@
       font-size: 22px;
     }
 
+    /* Footer */
     .footer {
       background: #1e3610;
       color: #fff;
@@ -174,6 +176,7 @@
       font-size: 18px;
     }
 
+    /* Адаптивная верстка для мобильных устройств */
     @media (max-width: 768px) {
       .hero-content h1 {
         font-size: 40px;
@@ -190,6 +193,31 @@
 
       .nav-links li {
         margin: 0;
+      }
+
+      .btn {
+        padding: 12px 30px;
+        font-size: 18px;
+      }
+
+      .section h2 {
+        font-size: 36px;
+      }
+
+      .section p {
+        font-size: 18px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .contact p {
+        font-size: 20px;
+      }
+
+      .footer {
+        font-size: 16px;
       }
     }
   </style>
@@ -221,7 +249,6 @@
       <p>Koktal Park — это современный городской парк, созданный для отдыха всей семьи. Уютные аллеи, живописные пруды, детские площадки и культурные мероприятия круглый год.</p>
     </div>
   </section>
-
 
   <section class="section" id="gallery">
     <div class="container">
