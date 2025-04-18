@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Koktal Park — Городской парк</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      line-height: 1.6;
+      background: #e0f7e9;
+      color: #2e4e1d;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar {
+      position: fixed;
+      width: 100%;
+      background: rgba(34, 139, 34, 0.9);
+      z-index: 999;
+      padding: 15px 0;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo a {
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-left: 30px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 22px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffe400;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1558981033-1c7b6a246ed9?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content h1 {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 40px;
+      background: #ffe400;
+      color: #2e4e1d;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 22px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #e6cc00;
+    }
+
+    .section {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 22px;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .services, .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding-top: 30px;
+    }
+
+    .service, .gallery-item {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .service h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .contact {
+      background: #2e4e1d;
+      color: #fff;
+      padding: 50px 0;
+    }
+
+    .contact p {
+      font-size: 22px;
+    }
+
+    .footer {
+      background: #1e3610;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 40px;
+      }
+
+      .hero-content p {
+        font-size: 22px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav-links li {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo"><a href="#">Koktal Park</a></div>
+      <ul class="nav-links">
+        <li><a href="#about">О парке</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Добро пожаловать в Koktal Park</h1>
+      <p>Природа. Отдых. События.</p>
+      <a href="#about" class="btn">Узнать больше</a>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <h2>О парке</h2>
+      <p>Koktal Park — это современный городской парк, созданный для отдыха всей семьи. Уютные аллеи, живописные пруды, детские площадки и культурные мероприятия круглый год.</p>
+    </div>
+  </section>
+
+
+  <section class="section" id="gallery">
+    <div class="container">
+      <h2>Галерея</h2>
+      <div class="gallery">
+        <div class="gallery-item"><img src="https://source.unsplash.com/400x300/?park,nature" alt="Парк 1"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/400x300/?lake,trees" alt="Парк 2"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/400x300/?garden,people" alt="Парк 3"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/400x300/?family,park" alt="Парк 4"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2>Контакты</h2>
+      <p>Email: Koktal Park@example.com</p>
+      <p>Телефон: +7 777 123 4567</p>
+      <p>Адрес: г. Алматы, ул. Зеленая 15</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © 2025 Koktal Park. Все права защищены.
+  </footer>
+
+</body>
+</html>
